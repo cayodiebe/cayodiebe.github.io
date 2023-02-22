@@ -3,180 +3,180 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>localhost/brabo/tags/bokeh/</loc>
+    <loc>#tags/bokeh/</loc>
     <lastmod>2021-04-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost/brabo/tags/dataviz/</loc>
+    <loc>#tags/dataviz/</loc>
     <lastmod>2021-04-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost/brabo/tags/fmri/</loc>
+    <loc>#tags/fmri/</loc>
     <lastmod>2021-04-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost/brabo/posts/game-of-dashboards-2/</loc>
+    <loc>#posts/game-of-dashboards-2/</loc>
     <lastmod>2021-04-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost/brabo/tags/holoviz/</loc>
+    <loc>#tags/holoviz/</loc>
     <lastmod>2021-04-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost/brabo/</loc>
+    <loc>#</loc>
     <lastmod>2021-04-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost/brabo/posts/</loc>
+    <loc>#posts/</loc>
     <lastmod>2021-04-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost/brabo/tags/python/</loc>
+    <loc>#tags/python/</loc>
     <lastmod>2021-04-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost/brabo/tags/</loc>
+    <loc>#tags/</loc>
     <lastmod>2021-04-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost/brabo/tags/dash/</loc>
+    <loc>#tags/dash/</loc>
     <lastmod>2021-03-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost/brabo/posts/game-of-dashboards/</loc>
+    <loc>#posts/game-of-dashboards/</loc>
     <lastmod>2021-03-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost/brabo/tags/streamlit/</loc>
+    <loc>#tags/streamlit/</loc>
     <lastmod>2021-03-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost/brabo/tags/brainviz/</loc>
+    <loc>#tags/brainviz/</loc>
     <lastmod>2021-03-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost/brabo/posts/diesitcom/</loc>
+    <loc>#posts/diesitcom/</loc>
     <lastmod>2021-03-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost/brabo/tags/itk/</loc>
+    <loc>#tags/itk/</loc>
     <lastmod>2021-03-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost/brabo/tags/mri/</loc>
+    <loc>#tags/mri/</loc>
     <lastmod>2021-03-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost/brabo/tags/bash/</loc>
+    <loc>#tags/bash/</loc>
     <lastmod>2021-03-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost/brabo/tags/dmri/</loc>
+    <loc>#tags/dmri/</loc>
     <lastmod>2021-03-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost/brabo/posts/bundle-connectome/</loc>
+    <loc>#posts/bundle-connectome/</loc>
     <lastmod>2021-03-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost/brabo/tags/mrtrix3/</loc>
+    <loc>#tags/mrtrix3/</loc>
     <lastmod>2021-03-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost/brabo/posts/interactive-network/</loc>
+    <loc>#posts/interactive-network/</loc>
     <lastmod>2021-03-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost/brabo/tags/plotly/</loc>
+    <loc>#tags/plotly/</loc>
     <lastmod>2021-03-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost/brabo/tags/fsl/</loc>
+    <loc>#tags/fsl/</loc>
     <lastmod>2021-02-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost/brabo/posts/quick-stripper/</loc>
+    <loc>#posts/quick-stripper/</loc>
     <lastmod>2021-02-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost/brabo/posts/papermill-preproc/</loc>
+    <loc>#posts/papermill-preproc/</loc>
     <lastmod>2021-02-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost/brabo/posts/mri-histogram/</loc>
+    <loc>#posts/mri-histogram/</loc>
     <lastmod>2021-02-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost/brabo/tags/tips-and-tricks/</loc>
+    <loc>#tags/tips-and-tricks/</loc>
     <lastmod>2021-02-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost/brabo/posts/mrtrix-in-colab/</loc>
+    <loc>#posts/mrtrix-in-colab/</loc>
     <lastmod>2021-02-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost/brabo/tags/containers/</loc>
+    <loc>#tags/containers/</loc>
     <lastmod>2021-01-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost/brabo/tags/docker/</loc>
+    <loc>#tags/docker/</loc>
     <lastmod>2021-01-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost/brabo/posts/fslfix-in-a-box/</loc>
+    <loc>#posts/fslfix-in-a-box/</loc>
     <lastmod>2021-01-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost/brabo/posts/interactive-treemaps/</loc>
+    <loc>#posts/interactive-treemaps/</loc>
     <lastmod>2021-01-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost/brabo/posts/glass-brain/</loc>
+    <loc>#posts/glass-brain/</loc>
     <lastmod>2021-01-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost/brabo/about_me/</loc>
+    <loc>#about_me/</loc>
   </url>
   
   <url>
-    <loc>localhost/brabo/categories/</loc>
+    <loc>#categories/</loc>
   </url>
   
   <url>
-    <loc>localhost/brabo/research/</loc>
+    <loc>#research/</loc>
   </url>
   
 </urlset>

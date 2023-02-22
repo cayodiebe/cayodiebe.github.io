@@ -1,4 +1,4 @@
-'<!doctype html>
+<!doctype html>
 <html lang="en-uk">
   <head>
     <title>Cayo Diebe</title>
@@ -20,14 +20,16 @@
   // GOOGLE ANALYCTS HERE
   </script>
 
-  <meta name="twitter:card" content="summary"/>
-  <meta name="twitter:title" content="Cayo Diebe"/>
-  <meta name="twitter:description" content="Um blog de programadores para programadores."/>
-  <meta property="og:title" content="Cayo Diebe" />
-  <meta property="og:description" content="Um blog de programadores para programadores." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="#" />
-  <meta property="og:updated_time" content="2021-04-12T00:00:00+00:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Cayo Diebe"/>
+<meta name="twitter:description" content="Um blog de programadores para programadores."/>
+<meta property="og:title" content="Cayo Diebe" />
+<meta property="og:description" content="Um blog de programadores para programadores." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="#" />
+<meta property="og:updated_time" content="2021-04-12T00:00:00+00:00" />
+
+
   </head>
   <body>
     <header class="app-header">
@@ -37,9 +39,9 @@
       <nav class="app-header-menu">
           <a class="app-header-menu-item" href="../../">Início</a>
              &bull; 
-          <a class="app-header-menu-item" href="tags/">Tags</a>
+          <a class="app-header-menu-item" href="../">Tags</a>
              &bull; 
-          <a class="app-header-menu-item" href="../../Contato/">Contato </a>
+          <a class="app-header-menu-item" href="../../contato/">Contato </a>
            &bull; 
           <a class="app-header-menu-item" href="../../sobre/">Sobre </a>
       </nav>
@@ -61,73 +63,26 @@
       </div>
     </header>
     <main class="app-container">
-      <article class="post">
-        <header class="post-header">
-          <a name="post"><h1 class ="post-title">Removendo lista de commits no GIT</h1></a>
-          <div class="post-meta">
-              <div>
+      <article>
+        <h1>Feedback</h1>
+        <ul class="posts-list">
+          <li class="posts-list-item">
+              <a class="posts-list-item-title" href="../../posts/feedback-360/">Feedback 360º</a>
+              <span class="posts-list-item-description">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
                   <title>calendar</title>
                   <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
                 </svg>
-                28 de setembro de 2020
-              </div>
-            <div>
+                20 de fevereiro de 2023
+                -
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
                   <title>clock</title>
                   <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
                 </svg>
-                1 min leitura
-            </div>
-            <div>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
-                <title>tag</title>
-                <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line>
-              </svg>
-                  <a class="tag" href="../../tags/git/">git</a>
-                  <a class="tag" href="../../tags/backend/">backend</a>
-            </div>
-          </div>
-        </header>
-    
-        <figure>
-          <center><img class="post-pic" src="../../img/removendo-lista-de-commits-no-git.png"></center>
-        </figure>
-        <div class="post-content">
-          <h1></h1>
-          <p>Este tutorial, tem como objetivo ajudar voc&ecirc;, que quer remover os commits antigos do seu reposit&oacute;rio git. Hospedado no GitHub, Azure Devops, Gitlab, Bitbucket ou qualquer outro reposit&oacute;rio.</p>
-
-          <h2>LEMBRE-SE SEMPRE, DE POSSUIR UM BACKUP PARA REALIZAR O PROCEDIMENTO</h2>
-
-          <p>Siga estes simples passos:</p>
-
-          <p><strong>Cria&ccedil;&atilde;o de uma branch virgem &ndash;</strong>&nbsp;Cria&ccedil;&atilde;o de uma branch virgem, para servir de base para a migra&ccedil;&atilde;o.</p>
-
-          <pre>
-          <code>git checkout --orphan temporaria</code></pre>
-
-          <p><strong>Adicionar arquivos &ndash;</strong>&nbsp;Adicione arquivos dentro da branch.</p>
-
-          <pre>
-          <code>git add .
-          git commit -m &quot;FirstCommit&quot;</code></pre>
-
-          <p><strong>Delete a branch master &ndash;</strong>&nbsp;Ser&aacute; necess&aacute;rio remover a branch master.</p>
-
-          <pre>
-          <code>git branch -D master</code></pre>
-
-          <p><strong>Altere o nome espec&iacute;fico da branch &ndash;</strong>&nbsp;Ap&oacute;s deletar a master, ser&aacute; necess&aacute;rio renomear a branch atual, para master.</p>
-
-          <pre>
-          <code>git branch -m master</code></pre>
-
-          <p><strong>Envie as mudan&ccedil;as &ndash;</strong>&nbsp;Se voc&ecirc; completou at&eacute; aqui, &eacute; necess&aacute;rio enviar as mudan&ccedil;as que foram realizadas para o reposit&oacute;rio remoto.</p>
-
-          <pre>
-          <code>git push -f origin master</code></pre>
-
-        </div>
+                2 min leitura
+              </span>
+            </li>
+        </ul>
       </article>
     </main>
   </body>

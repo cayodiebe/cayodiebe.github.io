@@ -36,7 +36,7 @@ if (!doNotTrack) {
     <meta property="og:title" content="DieSitCom - A minimal Streamlit-based viewer for DICOM data" />
 <meta property="og:description" content="DICOM another file There are two kind of (neuroimaging) people in this world: those who like the NIFTI format, and those who lie. Jokes aside, it is quite common for many neuroimagers to deal with the endpoint of the acquisition pipeline, to the point that not everyone has dealt directly with what actually comes out of an MRI scanner, data in DICOM format. But at some point, that time comes: for one reason or another, dcm2niix does not give us everything we need, and we need to go back to the source." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="localhost/brabo/posts/diesitcom/" />
+<meta property="og:url" content="#posts/diesitcom/" />
 <meta property="article:published_time" content="2021-03-17T00:00:00+00:00" />
 <meta property="article:modified_time" content="2021-03-17T00:00:00+00:00" />
 
@@ -44,7 +44,7 @@ if (!doNotTrack) {
   </head>
   <body>
     <header class="app-header">
-      <a href="localhost/brabo/"><img class="app-header-avatar" src="/img/me.png" alt="Matteo Mancini" /></a>
+      <a href="#"><img class="app-header-avatar" src="/img/me.png" alt="Matteo Mancini" /></a>
       <h1 class="title">CayoDiebe</h1>
       <h3 class="author">Matteo Mancini</h3>
       <nav class="app-header-menu">
@@ -58,13 +58,13 @@ if (!doNotTrack) {
         
           
           
-          <a class="app-header-menu-item" href="localhost/brabo/about_me/">About me</a>
+          <a class="app-header-menu-item" href="#about_me/">About me</a>
         
           
              &bull; 
           
           
-          <a class="app-header-menu-item" href="localhost/brabo/research/">Research</a>
+          <a class="app-header-menu-item" href="#research/">Research</a>
         
       </nav>
       <p>A blog about brains, open-source code and (literally) everything in between.</p>
@@ -108,17 +108,17 @@ if (!doNotTrack) {
   <title>tag</title>
   <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line>
 </svg>
-              <a class="tag" href="localhost/brabo/tags/brainviz/">brainviz</a>
-              <a class="tag" href="localhost/brabo/tags/python/">python</a>
-              <a class="tag" href="localhost/brabo/tags/streamlit/">streamlit</a>
-              <a class="tag" href="localhost/brabo/tags/itk/">ITK</a>
-              <a class="tag" href="localhost/brabo/tags/mri/">MRI</a>
+              <a class="tag" href="#tags/brainviz/">brainviz</a>
+              <a class="tag" href="#tags/python/">python</a>
+              <a class="tag" href="#tags/streamlit/">streamlit</a>
+              <a class="tag" href="#tags/itk/">ITK</a>
+              <a class="tag" href="#tags/mri/">MRI</a>
         </div>
       </div>
     </header>
     
       <figure>
-        <img class="post-pic" src="localhost/brabo/img/dcm.gif">
+        <img class="post-pic" src="#img/dcm.gif">
         
           <figcaption>If you think that both NIFTI and DICOM formats make things too complicated check out the <a href="https://xkcd.com/2116/">normal file format</a>.</figcaption>
         
@@ -129,7 +129,7 @@ if (!doNotTrack) {
 <p>There are two kind of (neuroimaging) people in this world: those who like the NIFTI format, and those who lie. Jokes aside, it is quite common for many <em>neuroimagers</em> to deal with the <em>endpoint</em> of the acquisition pipeline, to the point that not everyone has dealt directly with what actually comes out of an MRI scanner, data in <a href="https://towardsdatascience.com/understanding-dicom-bce665e62b72" title="Understanding DICOM">DICOM format</a>. But at some point, that time comes: for one reason or another, <code>dcm2niix</code> does not give us everything we need, and we need to go back to the <em>source</em>. But do we really want to look for a software to handle DICOM data and install it? Probably not. But there is good news: with <a href="https://itk.org" title="Insight ToolKit">ITK</a> (and specifically <a href="https://simpleitk.readthedocs.io/en/master/link_DicomSeriesReader_docs.html" title="SimpleITK Documentation">SimpleITK</a>), reading data and metadata from a DICOM folder is a matter of just a few lines of code. While we are at it, we may as well make a dashboard out of it!</p>
 <p>In this post, I will show how to put together that dashboard using <a href="https://www.streamlit.io" title="Streamlit">Streamlit</a>, so guess what, we are doing that in <em>50 lines of code</em>! As in most cases one may be interested in some <em>obscure</em> parameter hidden in the DICOM header, we will make sure that both the images and the metadata are accessible. This example and the related requirements are on the <a href="https://github.com/matteomancini/CayoDiebe/tree/master/brainviz/diesitcom">CayoDiebe repository</a>.</p>
 <h2 id="dont-count-your-dicoms-before-they-are-read">Don’t count your DICOMs before they are read</h2>
-<p>We can recycle some of the code written for the <a href="http://localhost/brabo/posts/diesitcom/#post" title="The Skull-Strip Club">skull-stripping dashboard</a>. As in that example, we need first to import the relevant packages and define two functions, one for selecting the input and the other for plotting:</p>
+<p>We can recycle some of the code written for the <a href="http://#posts/diesitcom/#post" title="The Skull-Strip Club">skull-stripping dashboard</a>. As in that example, we need first to import the relevant packages and define two functions, one for selecting the input and the other for plotting:</p>
 <pre><code>import os
 import matplotlib.pyplot as plt
 import pandas as pd

@@ -36,7 +36,7 @@ if (!doNotTrack) {
     <meta property="og:title" content="Every bundle counts - A recipe for bundle-wise, myelin-weighted connectomes" />
 <meta property="og:description" content="Esoteric connectomes Graphs are straightforward objects: you have a bunch of nodes, some of them are inter-connected by edges, and it all makes sense. It is in real-world networks that things become complicated: what&rsquo;s a node? What&rsquo;s an edge? When it comes to the brain, the answers to these questions depend on what scale one is targeting, and what tools has available. For whole-brain, structural connectivity, the usual approach is to use tractography, and then count how many streamlines there are between each pair of regions to weight the associated graph." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="localhost/brabo/posts/bundle-connectome/" />
+<meta property="og:url" content="#posts/bundle-connectome/" />
 <meta property="article:published_time" content="2021-03-10T00:00:00+00:00" />
 <meta property="article:modified_time" content="2021-03-10T00:00:00+00:00" />
 
@@ -44,7 +44,7 @@ if (!doNotTrack) {
   </head>
   <body>
     <header class="app-header">
-      <a href="localhost/brabo/"><img class="app-header-avatar" src="/img/me.png" alt="Matteo Mancini" /></a>
+      <a href="#"><img class="app-header-avatar" src="/img/me.png" alt="Matteo Mancini" /></a>
       <h1 class="title">CayoDiebe</h1>
       <h3 class="author">Matteo Mancini</h3>
       <nav class="app-header-menu">
@@ -58,13 +58,13 @@ if (!doNotTrack) {
         
           
           
-          <a class="app-header-menu-item" href="localhost/brabo/about_me/">About me</a>
+          <a class="app-header-menu-item" href="#about_me/">About me</a>
         
           
              &bull; 
           
           
-          <a class="app-header-menu-item" href="localhost/brabo/research/">Research</a>
+          <a class="app-header-menu-item" href="#research/">Research</a>
         
       </nav>
       <p>A blog about brains, open-source code and (literally) everything in between.</p>
@@ -108,16 +108,16 @@ if (!doNotTrack) {
   <title>tag</title>
   <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line>
 </svg>
-              <a class="tag" href="localhost/brabo/tags/python/">python</a>
-              <a class="tag" href="localhost/brabo/tags/bash/">bash</a>
-              <a class="tag" href="localhost/brabo/tags/mrtrix3/">MRtrix3</a>
-              <a class="tag" href="localhost/brabo/tags/dmri/">dMRI</a>
+              <a class="tag" href="#tags/python/">python</a>
+              <a class="tag" href="#tags/bash/">bash</a>
+              <a class="tag" href="#tags/mrtrix3/">MRtrix3</a>
+              <a class="tag" href="#tags/dmri/">dMRI</a>
         </div>
       </div>
     </header>
     
       <figure>
-        <img class="post-pic" src="localhost/brabo/img/connectome.gif">
+        <img class="post-pic" src="#img/connectome.gif">
         
           <figcaption>Here are some heatmaps to show the results, although heatmaps sometimes may be <a href="https://xkcd.com/1138/">a bit misleading</a>.</figcaption>
         
@@ -128,7 +128,7 @@ if (!doNotTrack) {
 <p>Graphs are straightforward objects: you have a bunch of nodes, some of them are inter-connected by edges, and it all makes sense. It is in real-world networks that things become complicated: what&rsquo;s a node? What&rsquo;s an edge? When it comes to the brain, the answers to these questions depend on what scale one is targeting, and what tools has available. For whole-brain, structural connectivity, the usual approach is to use tractography, and then count how many streamlines there are between each pair of regions to weight the associated graph. Number of streamlines (NOS) is not great, but it has been showed to <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/hbm.22828" title="Comparing tract-tracing and tractography">somehow correlate</a> with the microscopical fiber count. But what if we want to use something else as a weight? There&rsquo;s a <a href="https://www.jneurosci.org/content/36/14/4056" title="So many measures!">whole list of complementary MRI measures</a> that could be use to provide complementary information. Most tools to make this <em>fusion</em> are available in <a href="https://mrtrix.readthedocs.io/en/latest/" title="MRtrix3 Documentation">MRtrix3</a>, except maybe the last tricky one: averaging. It would be tempting to average each measure for each streamline, and then average again over the streamlines inter-connecting two areas - but this approach can introduce a NOS bias in the measure of interest. What if we want to compute, for each connection, the average across the <em>whole bundle</em>?</p>
 <p>In this post, I will show the whole workflow of how to make one of these <em>esoteric</em> connectomes, from the pre-processing to the final bundle-wise averaging, using as a weight a myeline measure. All the related script are on the <a href="https://github.com/matteomancini/CayoDiebe/tree/master/workflows/bundle-connectome">CayoDiebe repository</a>.</p>
 <h2 id="we-want-a-matrix---squish-those-data">We want a matrix - squish those data!</h2>
-<p>We need a lot of stuff (parcellated anatomical data, pre-processed diffusion data, a myelin map) before getting to the actual issue we want to tackle, so we better get going. Publicly available myelin maps are not easy to find, but we are in luck as recently Kristin Koller and colleagues shared the <a href="https://osf.io/z3mkn/" title="MICRA dataset">MICRA</a> dataset, containing a <a href="https://www.sciencedirect.com/science/article/pii/S1053811920308910" title="Koller et al. 2021">rich collection of data</a> that is perfect for this scenario. Let&rsquo;s start with downloading the data from <a href="https://osf.io" title="OSF">OSF</a> and the fundamental pre-processing: my usual choice for processing and parcellating T1-weighted data is <a href="https://surfer.nmr.mgh.harvard.edu" title="FreeSurfer">FreeSurfer</a>, but in this case to save time we will rely on <a href="https://github.com/Deep-MI/FastSurfer" title="FastSurfer repository">FastSurfer</a>. For the diffusion MRI pre-processing, we will use the <a href="http://localhost/brabo/posts/papermill-preproc/#post" title="Diffusion MRI preprocessing through papermill">papermill workflow</a> I talked about last month. Once we have done all of that, we can actually start thinking about the core processing. Here is how these first steps look like:</p>
+<p>We need a lot of stuff (parcellated anatomical data, pre-processed diffusion data, a myelin map) before getting to the actual issue we want to tackle, so we better get going. Publicly available myelin maps are not easy to find, but we are in luck as recently Kristin Koller and colleagues shared the <a href="https://osf.io/z3mkn/" title="MICRA dataset">MICRA</a> dataset, containing a <a href="https://www.sciencedirect.com/science/article/pii/S1053811920308910" title="Koller et al. 2021">rich collection of data</a> that is perfect for this scenario. Let&rsquo;s start with downloading the data from <a href="https://osf.io" title="OSF">OSF</a> and the fundamental pre-processing: my usual choice for processing and parcellating T1-weighted data is <a href="https://surfer.nmr.mgh.harvard.edu" title="FreeSurfer">FreeSurfer</a>, but in this case to save time we will rely on <a href="https://github.com/Deep-MI/FastSurfer" title="FastSurfer repository">FastSurfer</a>. For the diffusion MRI pre-processing, we will use the <a href="http://#posts/papermill-preproc/#post" title="Diffusion MRI preprocessing through papermill">papermill workflow</a> I talked about last month. Once we have done all of that, we can actually start thinking about the core processing. Here is how these first steps look like:</p>
 <pre><code>
 # Downloading anatomical, diffusion and MWF data for subject 1 and session 1
 wget https://files.osf.io/v1/resources/z3mkn/providers/owncloud/sub-01/ses-01/anat/sub-01_ses-01_T1w.nii.gz
